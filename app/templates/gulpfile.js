@@ -1,6 +1,6 @@
 'use strict';
 
-require('coffee-script/register'):
+require('coffee-script/register');
 
 var path = require('path'),
     gulp = require('gulp'),
