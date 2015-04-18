@@ -12,7 +12,7 @@ module.exports = generators.Base.extend({
   },
 
   install: function(){
-    this.bowerInstall(['normalize.css'], {});
+    this.bowerInstall(['normalize.css'], { 'saveDev': true });
     this.npmInstall([
       'coffee-script',
       'lodash-node',
