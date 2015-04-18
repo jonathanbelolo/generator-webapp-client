@@ -82,7 +82,7 @@ module.exports = generators.Base.extend({
     )
 
     this.fs.copyTpl(
-      this.templatePath('first_spect.coffee'),
+      this.templatePath('first_spec.coffee'),
       this.destinationPath('spec/first_spect.coffee'),
       { title: this.appname }
     )
