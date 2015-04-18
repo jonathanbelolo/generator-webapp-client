@@ -69,3 +69,5 @@ gulp.task('watch', function() {
         }
     });
 });
+
+gulp.task('default', ["templates", "webpack"]);
