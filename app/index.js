@@ -17,7 +17,6 @@ module.exports = generators.Base.extend({
       'coffee-script',
       'lodash-node',
       'jquery',
-      'baconjs',
       'mithril',
       'ramda',
       'pointfree-fantasy',
@@ -83,7 +82,7 @@ module.exports = generators.Base.extend({
 
     this.fs.copyTpl(
       this.templatePath('first_spec.coffee'),
-      this.destinationPath('spec/first_spect.coffee'),
+      this.destinationPath('spec/first_spec.coffee'),
       { title: this.appname }
     )
 
