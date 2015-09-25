@@ -11,7 +11,7 @@ module.exports = generators.Base.extend({
 
   },
 
-  install: function(){
+  installDeps: function(){
     this.bowerInstall(['normalize.css'], { 'saveDev': true });
     this.npmInstall([
       'coffee-script',
@@ -32,7 +32,6 @@ module.exports = generators.Base.extend({
       'gulp',
       'gulp-jade',
       'gulp-mocha',
-      'gulp-webpack-build',
       'webpack',
       'coffee-loader',
       'style-loader',
@@ -41,11 +40,12 @@ module.exports = generators.Base.extend({
       'mocha',
       'chai'
     ], { 'saveDev': true });
+    console.log('install done')
   },
 
   makeClient: function() {
     mkdirp.sync('public');
-    mkdirp.sync('lib');
+    mkdirp.sync('frontend');
     mkdirp.sync('spec');
     mkdirp.sync('style');
     mkdirp.sync('jade');
@@ -58,13 +58,13 @@ module.exports = generators.Base.extend({
     
     this.fs.copyTpl(
       this.templatePath('app.coffee'),
-      this.destinationPath('lib/app.coffee'),
+      this.destinationPath('frontend/app.coffee'),
       { title: this.appname }
     )
 
     this.fs.copyTpl(
       this.templatePath('webpack.config.js'),
-      this.destinationPath('lib/webpack.config.js'),
+      this.destinationPath('webpack.config.js'),
       {}
     )
 

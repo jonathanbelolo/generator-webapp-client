@@ -3,7 +3,7 @@ var rupture = require('rupture');
 var autoprefixer = require('autoprefixer-stylus');
 
 module.exports = {
-    entry: "./lib/app.coffee",
+    entry: "./frontend/app.coffee",
     output: {
         path: process.cwd() + '/public',
         filename: "bundle.js"
