@@ -1,6 +1,6 @@
 window.jQuery = require 'jquery'
 
-require '../bower_components/normalize.css/normalize.css'
+require '../bower_components/normalize-css/normalize.css'
 require '../style/layout'
 
 m = require 'mithril'
